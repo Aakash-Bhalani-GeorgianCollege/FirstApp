@@ -1,12 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import FlexBox1 from './src/components/FlexBox1'
+import { StyleSheet, View } from 'react-native';
+import FlexBox2 from './src/components/FlexBox2'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <FlexBox1/>
-      <StatusBar style="auto" />
+      <FlexBox2/>
     </View>
   );
 }
