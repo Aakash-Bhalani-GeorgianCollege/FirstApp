@@ -19,7 +19,7 @@ export const favoritePageStyles = StyleSheet.create({
     },
     containerBase: {
         position: 'relative',
-        borderRadius: 5,
+        borderRadius: 25,
         marginVertical: 10,
         marginHorizontal: 10,
         padding: 20,
