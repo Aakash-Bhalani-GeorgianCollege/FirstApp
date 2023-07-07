@@ -7,7 +7,7 @@ import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherD
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <FavoriteScreen/>
+      {/* <FavoriteScreen/> */}
       <CityWeatherDetails/>
     </SafeAreaView>
   );

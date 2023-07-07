@@ -1,5 +1,4 @@
 import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
-import { Ionicons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import WeatherItem from "./WeatherItem";
 
@@ -25,7 +24,7 @@ const CityWeatherDetails = () => {
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[primary, topNav]}>
                 <Image style={{width: "29%"}} source={require('../../../assets/menuIcon.png')} />
-                <Ionicons name="star" size={35} color="white" style={{marginLeft: 'auto'}}/>
+                <Image style={{resizeMode: 'contain',width: 50, height:35, marginLeft:'auto'}} source={require('../../../assets/star.png')} />
             </View>
             
             <View style = {[primary, box1]}>
