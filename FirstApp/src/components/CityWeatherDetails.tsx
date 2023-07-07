@@ -1,11 +1,16 @@
-import { SafeAreaView, View, Text, StyleSheet, Image, Dimensions } from "react-native"
+import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
+import { Ionicons } from '@expo/vector-icons';
 
-export default CityWeatherDetails = () => {
+const CityWeatherDetails = () => {
     
-    const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer, textContainer_3} = styles;
+    const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles} = styles;
     return(
         <SafeAreaView style = {styles.wrapper}>
-            <View style = {[primary, topNav]}></View>
+            <View style = {[primary, topNav]}>
+                <Image style={{width: "29%"}}
+                    source={require('../../assets/menuIcon.png')} />
+                <Ionicons name="star" size={35} color="white" style={{marginLeft: 'auto'}}/>
+            </View>
             <View style = {[primary, box1]}>
                 <View style={textContainer}>
                     <Text style={[textStyles, textStyles.mediumFont]}>Surat</Text>
@@ -28,27 +33,36 @@ export default CityWeatherDetails = () => {
                 </View>
                 
             </View>
-            <View style = {[primary, box2]}></View>
+            <View style = {[primary, box2]}>
+                <View style={{backgroundColor:'red',flex:0.3, marginTop:15, flexDirection:'row', alignItems:'center'}}>
+                    <Image style={clockIconStyles} source={require('../../assets/clock.png')}/>
+                    <Text style={[textStyles, {color:'black'}]}>Hourly Forecast</Text>
+                </View>
+            </View>
         </SafeAreaView>
     )
 
 }
 
+export default CityWeatherDetails;
+
 const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         flexDirection: "column",
-        backgroundColor: "#2B2B2B",  
+        backgroundColor: "#2B2B2B", 
     },
 
     primary: {
-        marginVertical: 10,
+        marginVertical: 8,
         marginHorizontal: 20,
     },
     
     topNav:{
-        flex: 0.5,
-        backgroundColor: "grey"
+        flex: 0.4,
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        paddingHorizontal: 10,
     },
 
     textContainer: {
@@ -87,17 +101,25 @@ const styles = StyleSheet.create({
     box1: {
         borderRadius: 40,
         flex: 3,
-        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: "black",
         paddingBottom: 15,
+        marginTop: 15
     },
 
     box2: {
         borderRadius: 40,
         flex: 0.7,
-        backgroundColor: "#E6E9ED"
-    }
+        backgroundColor: "#E6E9ED",
+        marginBottom: 20,
+    },
 
+    clockIconStyles: {
+        resizeMode: 'contain', 
+        width: 40,
+        height: 35, 
+        marginLeft: 20,
+        marginRight: 10
+    }
 })
