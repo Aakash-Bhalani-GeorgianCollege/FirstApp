@@ -1,16 +1,33 @@
 import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
 import { Ionicons } from '@expo/vector-icons';
+import { useFonts } from 'expo-font';
+import WeatherItem from "./WeatherItem";
+
 
 const CityWeatherDetails = () => {
+    const [fontsLoaded] = useFonts({
+        'Noto-Sans': require('../../../assets/Noto_Sans/NotoSans-ExtraBold.ttf'),
+    });
+
+    const weatherItems = [
+        { text: 'Now', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '1 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '2 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '3 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '4 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '5 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
+        { text: '6 AM', imageSource: require("../../../assets/outline.png")},
+        { text: '7 AM', imageSource: require("../../../assets/outline.png")},
+    ];
     
     const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles} = styles;
     return(
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[primary, topNav]}>
-                <Image style={{width: "29%"}}
-                    source={require('../../assets/menuIcon.png')} />
+                <Image style={{width: "29%"}} source={require('../../../assets/menuIcon.png')} />
                 <Ionicons name="star" size={35} color="white" style={{marginLeft: 'auto'}}/>
             </View>
+            
             <View style = {[primary, box1]}>
                 <View style={textContainer}>
                     <Text style={[textStyles, textStyles.mediumFont]}>Surat</Text>
@@ -23,9 +40,7 @@ const CityWeatherDetails = () => {
                 </View>
 
                 <View style={imageContainer}>
-                    <Image 
-                    source={require('../../assets/cloudIcons.png')}
-                    style={imageStyles} />
+                    <Image source={require('../../../assets/cloudIcons.png')} style={imageStyles} />
                 </View>
 
                 <View style={textContainer_3}>
@@ -33,15 +48,21 @@ const CityWeatherDetails = () => {
                 </View>
                 
             </View>
+
             <View style = {[primary, box2]}>
-                <View style={{backgroundColor:'red',flex:0.3, marginTop:15, flexDirection:'row', alignItems:'center'}}>
-                    <Image style={clockIconStyles} source={require('../../assets/clock.png')}/>
+                <View style={{flex:0.3, marginTop:15, flexDirection:'row', alignItems:'center'}}>
+                    <Image style={clockIconStyles} source={require('../../../assets/clock.png')}/>
                     <Text style={[textStyles, {color:'black'}]}>Hourly Forecast</Text>
+                </View>
+
+                <View style={styles.weatherItemsContainer}>
+                    {weatherItems.map((item, index) => (
+                        <WeatherItem key={index} text={item.text} imageSource={item.imageSource} />
+                    ))}
                 </View>
             </View>
         </SafeAreaView>
     )
-
 }
 
 export default CityWeatherDetails;
@@ -66,7 +87,7 @@ const styles = StyleSheet.create({
     },
 
     textContainer: {
-        flex: 0.3,
+        flex: 0.5,
         marginTop: 20
     },
 
@@ -76,10 +97,10 @@ const styles = StyleSheet.create({
     },
 
     textStyles: {
-        fontWeight: 700,
+        fontFamily: 'Noto-Sans',
         textAlign: 'center',
         color: "white",
-        fontSize: '16px',
+        fontSize: '18px',
         largeFont: {
             fontSize: '96px',   
         },
@@ -90,6 +111,8 @@ const styles = StyleSheet.create({
 
     imageContainer: {
         flex: 1,
+        marginTop: 30,
+        justifyContent: 'center',
     },
 
     imageStyles: {
@@ -110,7 +133,7 @@ const styles = StyleSheet.create({
 
     box2: {
         borderRadius: 40,
-        flex: 0.7,
+        flex: 0.8,
         backgroundColor: "#E6E9ED",
         marginBottom: 20,
     },
@@ -121,5 +144,13 @@ const styles = StyleSheet.create({
         height: 35, 
         marginLeft: 20,
         marginRight: 10
-    }
+    },
+
+    weatherItemsContainer: {
+        flex: 0.5,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10,
+        paddingHorizontal: 8
+    },
 })
