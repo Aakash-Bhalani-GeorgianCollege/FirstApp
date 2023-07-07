@@ -1,6 +1,6 @@
 import { SafeAreaView, View, StyleSheet } from "react-native"
 
-const FlexBox3 = ()=> {
+const Contact = ()=> {
     return (
         
         <View style={styles.container}>
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
     
 })
 
-export default FlexBox3
+export default Contact
