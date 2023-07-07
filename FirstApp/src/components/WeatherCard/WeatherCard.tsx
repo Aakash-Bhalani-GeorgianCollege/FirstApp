@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType, ImageStyle, Text, View, ViewStyle } from "react-native";
+import { Image, ImageSourcePropType, ImageStyle, Text, TextStyle, View, ViewStyle } from "react-native";
 import { favoritePageStyles } from "../../styles/styles";
 import { WeatherRecord } from "./WeatherRecord";
 
@@ -12,7 +12,7 @@ interface WeatherCardProps {
 const WeatherCard : React.FC<WeatherCardProps> = ({containerStyle, imagePath, weatherRecord}) => {
 
     let mainBodyStyle: ViewStyle;
-    let textStyle: ViewStyle;
+    let textStyle: TextStyle;
 
     switch (containerStyle) {
         case "danger":
