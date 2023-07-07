@@ -20,7 +20,7 @@ const CityWeatherDetails = () => {
         { text: '7 AM', imageSource: require("../../../assets/outline.png")},
     ];
     
-    const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles} = styles;
+    const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer} = styles;
     return(
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[primary, topNav]}>
@@ -55,7 +55,7 @@ const CityWeatherDetails = () => {
                     <Text style={[textStyles, {color:'black'}]}>Hourly Forecast</Text>
                 </View>
 
-                <View style={styles.weatherItemsContainer}>
+                <View style={weatherItemsContainer}>
                     {weatherItems.map((item, index) => (
                         <WeatherItem key={index} text={item.text} imageSource={item.imageSource} />
                     ))}
