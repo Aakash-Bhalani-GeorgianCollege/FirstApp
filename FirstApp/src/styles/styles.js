@@ -7,18 +7,25 @@ export const favoritePageStyles = StyleSheet.create({
         backgroundColor: DARK_COLORS.PRIMARY_COLOR
     },
     warningContainerText: {
-        color: DARK_COLORS.PRIMARY_TEXT_COLOR
+        color: DARK_COLORS.PRIMARY_TEXT_COLOR,
+        fontWeight: "bold"
     },
     dangerContainerContainer: {
         backgroundColor: DARK_COLORS.SECONDARY_COLOR
     },
     dangerContainerText: {
-        color: DARK_COLORS.TERTIARY_TEXT_COLOR
+        color: DARK_COLORS.TERTIARY_TEXT_COLOR,
+        fontWeight: "bold"
     },
     containerBase: {
-        borderRadius: 5,
-        padding: 10,
-        flex: 0.2,
+        position: 'relative',
+        borderRadius: 25,
+        marginVertical: 10,
+        marginHorizontal: 10,
+        padding: 20,
+        flex: 1,
+        flexBasis: 200,
+        justifyContent: "center"
     },
     favoriteScrollSize: {
         flexGrow: 1,
@@ -29,11 +36,13 @@ export const favoritePageStyles = StyleSheet.create({
         flexDirection: "column",
         paddingLeft: 10,
         paddingRight: 5,
+        alignItems: "center"
     },
     upperInfo: {
         flex: 2,
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        alignItems: 'center',
     },
     spaceTimeContainer: {
         flexDirection: "column"
@@ -43,16 +52,29 @@ export const favoritePageStyles = StyleSheet.create({
         alignItems: "flex-end"
     },
     backgroundImageContainer: {
-        position: 'relative',
-        flex: 1,
+        position: 'absolute',
         justifyContent: 'center',
+        alignItems: 'center',
+        top: "50%",
+        width: '100%',
+        height: '100%',
+    },
+    weatherFocusText: {
+        fontSize: 32,
+    },
+    heading: {
+        fontSize: 32,
+        padding: 30,
+        fontWeight: "bold",
+        color: DARK_COLORS.TERTIARY_TEXT_COLOR
     },
     backgroundImage: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: -1,
-    }
+        flex: 10,
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
+    },
+    contentContainer: {
+        flex: 1,
+    },
 });
