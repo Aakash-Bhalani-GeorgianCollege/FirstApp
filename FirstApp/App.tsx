@@ -2,16 +2,16 @@ import { SafeAreaView, StyleSheet, View } from 'react-native';
 import FlexBox2 from './src/components/FlexBox2'
 import { DARK_COLORS } from './src/styles/Colors';
 import FavoriteScreen from './src/screens/FavoriteScreen';
+import WeatherCard from './src/components/WeatherCard/WeatherCard';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
-import FlexBox1 from './src/components/FlexBox1';
-import Contact from './src/components/Contact';
+import Searchweather from './src/components/Searchweather';
 
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <FavoriteScreen/> */}
-      <Contact/>
+      <Searchweather/>
     </SafeAreaView>
   );
 }
