@@ -1,12 +1,26 @@
+import { useEffect, useState } from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
-import { useFonts } from 'expo-font';
+import * as Font from 'expo-font';
 import WeatherItem from "./WeatherItem";
 
 
 const CityWeatherDetails = () => {
-    const [fontsLoaded] = useFonts({
-        'Noto-Sans': require('../../../assets/Noto_Sans/NotoSans-ExtraBold.ttf'),
-    });
+    const [fontLoaded, setFontLoaded] = useState(false);
+
+    useEffect(() => {
+        const loadFonts = async () => {
+        await Font.loadAsync({
+            'Noto-Sans': require('../../../assets/Noto_Sans/NotoSans-ExtraBold.ttf'),
+        });
+        setFontLoaded(true);
+        };
+
+        loadFonts();
+    }, []);
+
+    if (!fontLoaded) {
+        return null; // or return a loading screen/component while the font is loading
+    }
 
     const weatherItems = [
         { text: 'Now', imageSource: require("../../../assets/Scattered-showers-night.png")},
@@ -19,7 +33,8 @@ const CityWeatherDetails = () => {
         { text: '7 AM', imageSource: require("../../../assets/outline.png")},
     ];
     
-    const {primary,topNav,box1,box2,textStyles,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer} = styles;
+    const {primary,topNav,box1,box2,textStyles,largeFont,mediumFont,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer} = styles;
+    
     return(
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[primary, topNav]}>
@@ -29,13 +44,13 @@ const CityWeatherDetails = () => {
             
             <View style = {[primary, box1]}>
                 <View style={textContainer}>
-                    <Text style={[textStyles, textStyles.mediumFont]}>Surat</Text>
+                    <Text style={[textStyles, mediumFont]}>Surat</Text>
                     <Text style={textStyles}>90% Chance of Rain</Text>
                 </View>
 
                 <View style={textContainer}>
                     <Text style={textStyles}>Drizzle</Text>
-                    <Text style={[textStyles, textStyles.largeFont]}>26{'\u00b0'}C </Text>
+                    <Text style={[textStyles, largeFont]}>26{'\u00b0'}C </Text>
                 </View>
 
                 <View style={imageContainer}>
@@ -99,14 +114,16 @@ const styles = StyleSheet.create({
         fontFamily: 'Noto-Sans',
         textAlign: 'center',
         color: "white",
-        fontSize: '18px',
-        largeFont: {
-            fontSize: '96px',   
-        },
-        mediumFont: {
-            fontSize: '40px',
-        }, 
+        fontSize: 18,
     },
+
+    largeFont: {
+        fontSize: 96,   
+    },
+
+    mediumFont: {
+        fontSize: 48,
+    }, 
 
     imageContainer: {
         flex: 1,

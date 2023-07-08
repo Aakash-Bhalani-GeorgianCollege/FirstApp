@@ -5,7 +5,7 @@ import HomePage from './src/components/HomePage';
 import FavoriteScreen from './src/screens/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
-import SearchWeather from './src/components/Searchweather';
+import SearchWeather from './src/components/SearchWeather';
 
 
 export default function App() {
