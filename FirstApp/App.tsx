@@ -11,7 +11,6 @@ import SearchWeather from './src/components/Searchweather';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <FravoriteScreen/> */}
       <HomePage/>
       {/* <SearchWeather/> */}
       {/* <FavoriteScreen/> */}
