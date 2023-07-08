@@ -13,11 +13,11 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       {/* <FravoriteScreen/> */}
       <HomePage/>
-      {/* <Searchweather/>
-      <FavoriteScreen/>
-      <CityWeatherDetails/>
-      <SettingsPage/>
-      <Contact/> */}
+      {/* <Searchweather/> */}
+      {/* <FavoriteScreen/> */}
+      {/* <CityWeatherDetails/> */}
+      {/* <SettingsPage/> */}
+      {/* <Contact/> */}
     </SafeAreaView>
   );
 }
