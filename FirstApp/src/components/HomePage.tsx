@@ -1,6 +1,6 @@
 import { SafeAreaView, View, StyleSheet } from "react-native"
 
-const FlexBox1 = ()=> {
+const HomePage = ()=> {
     return (
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[styles.primary, styles.box1]}>
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default FlexBox1
+export default HomePage
