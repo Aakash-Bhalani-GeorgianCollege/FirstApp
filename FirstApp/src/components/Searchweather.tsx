@@ -1,6 +1,6 @@
 import { SafeAreaView, View, StyleSheet } from "react-native"
 
-const Searchweather = ()=> {
+const SearchWeather = ()=> {
     return (
         
       <View style={styles.container}>
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     
 })
 
-export default Searchweather
+export default SearchWeather
