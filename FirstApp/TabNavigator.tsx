@@ -8,13 +8,17 @@ import HomePage from './src/components/HomePage';
 import FavoriteScreen from './src/screens/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
-import SearchWeather from './src/components/SearchWeather';
 import { LIGHT_COLORS } from './src/styles/Colors';
+import SearchWeather from './src/components/Searchweather';
+import Onbording from './src/screens/Onbording';
+
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   const [fontLoaded, setFontLoaded] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+
 
   useEffect(() => {
     async function loadFont() {
@@ -24,10 +28,17 @@ const TabNavigator = () => {
       setFontLoaded(true);
     }
     loadFont();
+
+    setTimeout(() => setShowSplash(false), 3000);
   }, []);
 
   if (!fontLoaded) {
     return null;
+  }
+
+  if (showSplash) {
+    // Show the splash screen while loading fonts and assets
+    return <Onbording />;
   }
 
   return (
