@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 
-const Onbording = () => {
+const Onboarding = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/Onbording.png')}
+        source={require('../assets/images/Onboarding.png')}
         style={styles.image}
       />
       <Text style={styles.welcomeText}>Weather Man</Text>
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Onbording;
+export default Onboarding;

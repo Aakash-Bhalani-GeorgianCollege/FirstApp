@@ -1,21 +1,20 @@
 import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
-import WeatherItem from "./WeatherItem";
+import WeatherItem from "../CityWeatherDetails/WeatherItem";
 
 
-const CityWeatherDetails = () => {
+const HomePage = () => {
 
     const weatherItems = [
-        { text: 'Now', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '1 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '2 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '3 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '4 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '5 AM', imageSource: require("../../../assets/Scattered-showers-night.png")},
-        { text: '6 AM', imageSource: require("../../../assets/outline.png")},
-        { text: '7 AM', imageSource: require("../../../assets/outline.png")},
+        { text: 'Now', imageSource: require("../../../assets/outline.png")},
+        { text: '5 PM', imageSource: require("../../../assets/outline.png")},
+        { text: '6 PM', imageSource: require("../../../assets/outline.png")},
+        { text: '7 PM', imageSource: require("../../../assets/outline.png")},
+        { text: '8 PM', imageSource: require("../../../assets/outline.png")},
+        { text: '9 PM', imageSource: require("../../../assets/Clear-night.png")},
+        { text: '10 PM', imageSource: require("../../../assets/Clear-night.png")},
     ];
     
-    const {primary,topNav,box1,box2,textStyles,largeFont,mediumFont,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer} = styles;
+    const {primary,topNav,box1,box2,textStyles,largeFont,mediumFont,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer,thunderStyles} = styles;
     
     return(
         <SafeAreaView style = {styles.wrapper}>
@@ -26,17 +25,18 @@ const CityWeatherDetails = () => {
             
             <View style = {[primary, box1]}>
                 <View style={textContainer}>
-                    <Text style={[textStyles, mediumFont]}>Surat</Text>
+                    <Text style={[textStyles, mediumFont]}>Barrie</Text>
                     <Text style={textStyles}>90% Chance of Rain</Text>
                 </View>
 
                 <View style={textContainer}>
-                    <Text style={textStyles}>Drizzle</Text>
-                    <Text style={[textStyles, largeFont]}>26{'\u00b0'}C </Text>
+                    <Text style={textStyles}>Thunderstorm</Text>
+                    <Text style={[textStyles, largeFont]}>23{'\u00b0'}C </Text>
                 </View>
 
                 <View style={imageContainer}>
-                    <Image source={require('../../../assets/cloudIcons.png')} style={imageStyles} />
+                    <Image source={require('../../assets/images/grey-cloud.png')} style={imageStyles} />
+                    <Image source={require('../../assets/images/jump.png')} style={[thunderStyles, {resizeMode: 'contain'}]}/>
                 </View>
 
                 <View style={textContainer_3}>
@@ -61,7 +61,7 @@ const CityWeatherDetails = () => {
     )
 }
 
-export default CityWeatherDetails;
+export default HomePage;
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 
     textStyles: {
         textAlign: 'center',
-        color: "white",
+        color: "black",
         fontSize: 18,
         fontWeight: 'bold'
     },
@@ -108,8 +108,9 @@ const styles = StyleSheet.create({
     }, 
 
     imageContainer: {
-        zIndex:-1,
+        position: "relative",
         flex: 1,
+        zIndex: -1,
         justifyContent: 'center',
     },
 
@@ -119,12 +120,19 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
 
+    thunderStyles: {
+        position: "absolute",
+        left: -25,
+        height: '120%',
+        width: '100%'
+    },
+
     box1: {
         borderRadius: 40,
         flex: 3,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "black",
+        backgroundColor: "#FAD349",
         paddingBottom: 15,
         marginTop: 15
     },
