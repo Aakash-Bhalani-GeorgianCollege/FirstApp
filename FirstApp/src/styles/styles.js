@@ -78,3 +78,64 @@ export const favoritePageStyles = StyleSheet.create({
         flex: 1,
     },
 });
+
+export const signUpPageStyles = StyleSheet.create({
+    mainBody: {
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flex: 1,
+        width: "100%"
+    },
+    headerImageView: {
+        flex: 1,
+        flexShrink: 1
+    },
+    headerImage: {
+        flex: 2,
+    },
+    headerView: {
+    },
+    header: {
+        flexBasis: 50,
+        flexShrink: 1,
+        color: DARK_COLORS.TERTIARY_TEXT_COLOR,
+        fontSize: 32,
+    },
+    inputView: {
+        width: "100%",
+        justifyContent: "flex-start",
+        alignItems: "center"
+    },
+    inputTextField: {
+        borderWidth: 3,
+        borderRadius: 10,
+        color: DARK_COLORS.SECONDARY_TEXT_COLOR,
+        width: "80%",
+        padding: 10,
+        fontSize: 24,
+        margin:5
+    },
+    signUpButton: {
+        backgroundColor: DARK_COLORS.PRIMARY_COLOR,
+        color: DARK_COLORS.PRIMARY_TEXT_COLOR,
+        borderWidth: 3,
+        borderRadius: 20,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        flexShrink: 1,
+        maxWidth: '90%',
+    },
+    signUpButtonText: {
+        fontSize: 24
+    },
+    buttonView: {
+        justifyContent: "flex-start",
+        alignItems: "center",
+        flex: 1,
+        padding: 10
+    },
+    signUpButtonView: {
+        maxWidth: '90%', // Set a maximum width based on the screen size
+        alignItems: 'center',
+    }
+})
