@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import TabNavigator from './TabNavigator';
 import { LIGHT_COLORS } from './src/styles/Colors';
 import LoginScreen from './src/screens/LoginScreen';
