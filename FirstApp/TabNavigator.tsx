@@ -16,7 +16,7 @@ import { LIGHT_COLORS } from './src/styles/Colors';
 
 
 import Onboarding from './src/screens/Onboarding';
-import SearchWeather from './src/components/Searchweather';
+import SearchWeather from './src/components/SearchWeather';
 
 
 
