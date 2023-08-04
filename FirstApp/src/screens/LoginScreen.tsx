@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 const LoginScreen = ({ 
-//    navigation
+     navigation
  }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +20,7 @@ const LoginScreen = ({
     const dummyPassword = 'test';
 
     if (email === dummyEmail && password === dummyPassword) {
-       
+       navigation.navigate("Home")
     } else {
       alert('Invalid credentials. Please try again.');
     }

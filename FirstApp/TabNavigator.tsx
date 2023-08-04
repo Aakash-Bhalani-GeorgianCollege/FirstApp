@@ -49,7 +49,6 @@ const TabNavigator = () => {
   }
 
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
@@ -139,7 +138,6 @@ const TabNavigator = () => {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 
