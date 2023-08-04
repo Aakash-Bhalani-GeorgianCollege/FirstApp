@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
     }, 
 
     imageContainer: {
+        zIndex:-1,
         flex: 1,
-        marginTop: 30,
         justifyContent: 'center',
     },
 
