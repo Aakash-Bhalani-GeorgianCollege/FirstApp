@@ -16,11 +16,11 @@ const LoginScreen = ({
 
   const handleLogin = () => {
 
-    const dummyEmail = 'test';
-    const dummyPassword = 'test';
+    const dummyEmail = 'Test';
+    const dummyPassword = 'Test';
 
     if (email === dummyEmail && password === dummyPassword) {
-        // navigate to Tab navigator screen
+       
     } else {
       alert('Invalid credentials. Please try again.');
     }
