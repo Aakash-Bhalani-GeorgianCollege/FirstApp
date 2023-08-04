@@ -108,8 +108,8 @@ const styles = StyleSheet.create({
     }, 
 
     imageContainer: {
+        zIndex:-1,
         flex: 1,
-        zIndex: -1,
         justifyContent: 'center',
     },
 
