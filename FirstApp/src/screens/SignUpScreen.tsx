@@ -34,8 +34,8 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
             </View>
                 <View style={signUpPageStyles.buttonView}>
                 <View style={signUpPageStyles.signUpButtonView}><Pressable style={signUpPageStyles.signUpButton} onPress={handleSignUp}><Text style={signUpPageStyles.signUpButtonText}>Sign Up</Text></Pressable></View>
-                <View>
-                    <Text>Already Have an Account? <TouchableOpacity onPress={removeSelf}><Text style={[{textAlign: "center"}]}>Log In</Text></TouchableOpacity></Text>
+                <View style={signUpPageStyles.loginView}>
+                    <Text style={signUpPageStyles.loginText}>Already Have an Account? <TouchableOpacity onPress={removeSelf} ><Text style={signUpPageStyles.loginAnchorText}>Log In</Text></TouchableOpacity></Text>
                 </View>
                 </View>
         </View>

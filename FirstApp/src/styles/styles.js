@@ -135,7 +135,21 @@ export const signUpPageStyles = StyleSheet.create({
         padding: 10
     },
     signUpButtonView: {
-        maxWidth: '90%', // Set a maximum width based on the screen size
+        maxWidth: '90%',
         alignItems: 'center',
+    },
+    loginText: {
+        color: DARK_COLORS.TERTIARY_TEXT_COLOR
+    },
+    loginAnchorText: {
+        color: DARK_COLORS.PRIMARY_COLOR,
+        alignSelf: 'center'
+    },
+    loginOpacityComponent: {
+        textAlignVertical: "center"
+    },
+    loginView: {
+        justifyContent: "center",
+        alignItems: "center"
     }
 })
