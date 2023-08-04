@@ -9,7 +9,7 @@ import FavoriteScreen from './src/screens/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
 import { LIGHT_COLORS } from './src/styles/Colors';
-import SearchWeather from './src/components/Searchweather';
+import SearchWeather from './src/components/SearchWeather';
 import Onbording from './src/screens/Onbording';
 
 
