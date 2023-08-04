@@ -3,14 +3,23 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Image } from 'react-native';
 import * as Font from 'expo-font';
+
 import SettingsScreen from './src/screens/SettingsScreen';
 import HomePage from './src/components/HomePage';
+
+import SettingsPage from './src/components/SettingsPage';
+import HomePage from './src/components/HomePage/HomePage';
+
 import FavoriteScreen from './src/screens/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
 import { LIGHT_COLORS } from './src/styles/Colors';
 import SearchWeather from './src/components/SearchWeather';
+
 import Onbording from './src/screens/Onbording';
+
+import Onboarding from './src/screens/Onboarding';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -38,7 +47,7 @@ const TabNavigator = () => {
 
   if (showSplash) {
     // Show the splash screen while loading fonts and assets
-    return <Onbording />;
+    return <Onboarding />;
   }
 
   return (
