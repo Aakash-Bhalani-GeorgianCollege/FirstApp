@@ -20,7 +20,7 @@ const CityWeatherDetails = () => {
     return(
         <SafeAreaView style = {styles.wrapper}>
             <View style = {[primary, topNav]}>
-                <Image style={{width: "29%"}} source={require('../../../assets/menuIcon.png')} />
+            <Image style={{resizeMode: 'contain',width: 55, height:35,}} source={require('../../../assets/menuIcon.png')} />
                 <Image style={{resizeMode: 'contain',width: 50, height:35, marginLeft:'auto'}} source={require('../../../assets/star.png')} />
             </View>
             
