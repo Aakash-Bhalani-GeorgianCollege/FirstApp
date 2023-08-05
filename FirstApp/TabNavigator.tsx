@@ -3,53 +3,46 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Image } from 'react-native';
 import * as Font from 'expo-font';
-
 import SettingsScreen from './src/screens/SettingsScreen';
-
-
 import HomePage from './src/components/HomePage/HomePage';
-
 import FavoriteScreen from './src/screens/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
-import { LIGHT_COLORS } from './src/styles/Colors';
-
-
+import { DARK_COLORS, LIGHT_COLORS } from './src/styles/Colors';
 import Onboarding from './src/screens/Onboarding';
 import SearchWeather from './src/components/SearchWeather';
-
 
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [showSplash, setShowSplash] = useState(true);
+  // Moved to login screen
+  // const [fontLoaded, setFontLoaded] = useState(false);
+  // const [showSplash, setShowSplash] = useState(true);
 
 
-  useEffect(() => {
-    async function loadFont() {
-      await Font.loadAsync({
-        'Noto-Sans': require('./assets/Noto_Sans/NotoSans-Regular.ttf'),
-      });
-      setFontLoaded(true);
-    }
-    loadFont();
+  // useEffect(() => {
+  //   async function loadFont() {
+  //     await Font.loadAsync({
+  //       'Noto-Sans': require('./assets/Noto_Sans/NotoSans-Regular.ttf'),
+  //     });
+  //     setFontLoaded(true);
+  //   }
+  //   loadFont();
 
-    setTimeout(() => setShowSplash(false), 3000);
-  }, []);
+  //   setTimeout(() => setShowSplash(false), 3000);
+  // }, []);
 
-  if (!fontLoaded) {
-    return null;
-  }
+  // if (!fontLoaded) {
+  //   return null;
+  // }
 
-  if (showSplash) {
-    // Show the splash screen while loading fonts and assets
-    return <Onboarding />;
-  }
+  // if (showSplash) {
+  //   // Show the splash screen while loading fonts and assets
+  //   return <Onboarding />;
+  // }
 
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
@@ -57,10 +50,10 @@ const TabNavigator = () => {
             fontFamily: 'Noto-Sans',
             fontSize: 12,
           },
-          tabBarActiveTintColor: LIGHT_COLORS.PRIMARY_TEXT_COLOR,
-          tabBarInactiveTintColor: LIGHT_COLORS.TERTIARY_TEXT_COLOR,
+          tabBarActiveTintColor: LIGHT_COLORS.PRIMARY_COLOR,
+          tabBarInactiveTintColor: DARK_COLORS.PRIMARY_TEXT_COLOR,
           tabBarStyle: {
-            backgroundColor: LIGHT_COLORS.PRIMARY_BACKGROUND_COLOR,
+            backgroundColor: DARK_COLORS.SECONDARY_COLOR,
             borderTopWidth: 0,
             borderTopColor: LIGHT_COLORS.SECONDARY_BACKGROUND_COLOR,
           },
@@ -139,7 +132,6 @@ const TabNavigator = () => {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 
