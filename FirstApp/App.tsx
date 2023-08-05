@@ -19,6 +19,7 @@ export default function App() {
          options={{
                   headerShown: false,
                 }} />
+      <Stack.Screen name="Sign Up" component={SignUpScreen} options={{}}/>
       <Stack.Screen name="Home" component={TabNavigator}   
          options={{
               headerShown: false,
