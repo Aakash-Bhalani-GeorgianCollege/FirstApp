@@ -66,7 +66,8 @@ export const favoritePageStyles = StyleSheet.create({
         fontSize: 32,
         padding: 30,
         fontWeight: "bold",
-        color: DARK_COLORS.TERTIARY_TEXT_COLOR
+        color: DARK_COLORS.PRIMARY_TEXT_COLOR,
+        backgroundColor: DARK_COLORS.PRIMARY_BACKGROUND_COLOR
     },
     backgroundImage: {
         flex: 10,
