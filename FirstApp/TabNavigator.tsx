@@ -15,30 +15,31 @@ import SearchWeather from './src/components/SearchWeather';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [showSplash, setShowSplash] = useState(true);
+  // Moved to login screen
+  // const [fontLoaded, setFontLoaded] = useState(false);
+  // const [showSplash, setShowSplash] = useState(true);
 
 
-  useEffect(() => {
-    async function loadFont() {
-      await Font.loadAsync({
-        'Noto-Sans': require('./assets/Noto_Sans/NotoSans-Regular.ttf'),
-      });
-      setFontLoaded(true);
-    }
-    loadFont();
+  // useEffect(() => {
+  //   async function loadFont() {
+  //     await Font.loadAsync({
+  //       'Noto-Sans': require('./assets/Noto_Sans/NotoSans-Regular.ttf'),
+  //     });
+  //     setFontLoaded(true);
+  //   }
+  //   loadFont();
 
-    setTimeout(() => setShowSplash(false), 3000);
-  }, []);
+  //   setTimeout(() => setShowSplash(false), 3000);
+  // }, []);
 
-  if (!fontLoaded) {
-    return null;
-  }
+  // if (!fontLoaded) {
+  //   return null;
+  // }
 
-  if (showSplash) {
-    // Show the splash screen while loading fonts and assets
-    return <Onboarding />;
-  }
+  // if (showSplash) {
+  //   // Show the splash screen while loading fonts and assets
+  //   return <Onboarding />;
+  // }
 
   return (
       <Tab.Navigator
