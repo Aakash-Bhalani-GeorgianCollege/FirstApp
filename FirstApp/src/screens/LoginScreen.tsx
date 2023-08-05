@@ -53,6 +53,8 @@ const LoginScreen = ({
   if (showSplash) {
     // Show the splash screen while loading fonts and assets
     return <Onboarding />;
+  }
+  
   const handleSignUp = () => {
     console.log("Signing up");
     navigation.push("Sign Up");
