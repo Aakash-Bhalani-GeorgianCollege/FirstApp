@@ -22,7 +22,7 @@ const SearchWeather = () => {
     }, []);
 
     if (!fontLoaded) {
-        return null; // or return a loading screen/component while the font is loading
+        return null; 
     }
 
     const { primary, topNav, horizontalContainer } = styles;
