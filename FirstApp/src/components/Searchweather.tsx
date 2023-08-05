@@ -29,10 +29,7 @@ const SearchWeather = () => {
 
     return (
         <SafeAreaView style={styles.wrapper}>
-            {/* <View style={[primary, topNav]}>
-                <Image style={{ width: "29%" }} source={require('../../assets/menuIcon.png')} />
-            </View>
-            */}
+           
             <View style={styles.horizontalContainer}>
                 <TouchableOpacity>
                     <View style={styles.curvyBox} >
