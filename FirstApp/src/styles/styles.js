@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { DARK_COLORS } from "./Colors";
+import { DARK_COLORS, GRAY } from "./Colors";
 
 
 export const favoritePageStyles = StyleSheet.create({
@@ -84,7 +84,8 @@ export const signUpPageStyles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "flex-start",
         flex: 1,
-        width: "100%"
+        width: "100%",
+        backgroundColor: DARK_COLORS.PRIMARY_BACKGROUND_COLOR
     },
     headerImageView: {
         flex: 1,
@@ -109,7 +110,7 @@ export const signUpPageStyles = StyleSheet.create({
     inputTextField: {
         borderWidth: 3,
         borderRadius: 10,
-        color: DARK_COLORS.SECONDARY_TEXT_COLOR,
+        color: GRAY.s600,
         width: "80%",
         padding: 10,
         fontSize: 24,

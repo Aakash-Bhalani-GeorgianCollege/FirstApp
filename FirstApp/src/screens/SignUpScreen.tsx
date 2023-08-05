@@ -1,7 +1,7 @@
 import { Image, Pressable, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native"
 import { signUpPageStyles } from "../styles/styles"
 import { Button } from "react-native";
-import { DARK_COLORS } from "../styles/Colors";
+import { DARK_COLORS, GRAY } from "../styles/Colors";
 import { NavigationProp } from '@react-navigation/native';
 
 interface Props {
@@ -27,10 +27,10 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
 
             <Text style={signUpPageStyles.header}>Create an Account</Text>
             <View style={signUpPageStyles.inputView}>
-                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={DARK_COLORS.PRIMARY_TEXT_COLOR} placeholder="Firstname"/>
-                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={DARK_COLORS.PRIMARY_TEXT_COLOR} placeholder="Lastname"/>
-                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={DARK_COLORS.PRIMARY_TEXT_COLOR} keyboardType="email-address" textContentType="emailAddress" placeholder="Email"/>
-                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={DARK_COLORS.PRIMARY_TEXT_COLOR} secureTextEntry={true} autoCapitalize="none" autoCorrect={false} placeholder="password"/>
+                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={GRAY.s600} placeholder="Firstname"/>
+                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={GRAY.s600} placeholder="Lastname"/>
+                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={GRAY.s600} keyboardType="email-address" textContentType="emailAddress" placeholder="Email"/>
+                <TextInput style={signUpPageStyles.inputTextField} placeholderTextColor={GRAY.s600} secureTextEntry={true} autoCapitalize="none" autoCorrect={false} placeholder="password"/>
             </View>
                 <View style={signUpPageStyles.buttonView}>
                 <View style={signUpPageStyles.signUpButtonView}><Pressable style={signUpPageStyles.signUpButton} onPress={handleSignUp}><Text style={signUpPageStyles.signUpButtonText}>Sign Up</Text></Pressable></View>

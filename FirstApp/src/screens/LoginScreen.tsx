@@ -26,6 +26,11 @@ const LoginScreen = ({
     }
   };
 
+  const handleSignUp = () => {
+    console.log("Signing up");
+    navigation.push("Sign Up");
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -52,7 +57,7 @@ const LoginScreen = ({
           <Text style={styles.loginButtonText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={() => alert("Sign up button pressed!")}>
+      <TouchableOpacity onPress={handleSignUp}>
         <Text style={styles.signupText}>Don't have an account? Sign up</Text>
       </TouchableOpacity>
     </View>
