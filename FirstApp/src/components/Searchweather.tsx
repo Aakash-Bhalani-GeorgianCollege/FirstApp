@@ -9,7 +9,6 @@ import { WeatherRecord } from "../components/WeatherCard/WeatherRecord"
 const SearchWeather = () => {
     const [fontLoaded, setFontLoaded] = useState(false);
 
-
     useEffect(() => {
         const loadFonts = async () => {
             await Font.loadAsync({
