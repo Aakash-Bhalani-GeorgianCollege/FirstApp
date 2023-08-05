@@ -12,6 +12,7 @@ import { DARK_COLORS, LIGHT_COLORS } from './src/styles/Colors';
 import Onboarding from './src/screens/Onboarding';
 import SearchWeather from './src/components/SearchWeather';
 
+
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
