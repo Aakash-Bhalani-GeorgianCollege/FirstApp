@@ -1,18 +1,11 @@
 import { SafeAreaView, View, Text, StyleSheet, Image} from "react-native"
 import WeatherItem from "../CityWeatherDetails/WeatherItem";
+import { getHomeDataFromModel } from "../../screens/controllers/screenDataControllers/HomeDataController";
 
 
 const HomePage = () => {
 
-    const weatherItems = [
-        { text: 'Now', imageSource: require("../../../assets/outline.png")},
-        { text: '5 PM', imageSource: require("../../../assets/outline.png")},
-        { text: '6 PM', imageSource: require("../../../assets/outline.png")},
-        { text: '7 PM', imageSource: require("../../../assets/outline.png")},
-        { text: '8 PM', imageSource: require("../../../assets/outline.png")},
-        { text: '9 PM', imageSource: require("../../../assets/Clear-night.png")},
-        { text: '10 PM', imageSource: require("../../../assets/Clear-night.png")},
-    ];
+    const weatherItems = getHomeDataFromModel();
     
     const {primary,topNav,box1,box2,textStyles,largeFont,mediumFont,imageStyles,imageContainer,textContainer,textContainer_3,clockIconStyles,weatherItemsContainer,thunderStyles} = styles;
     

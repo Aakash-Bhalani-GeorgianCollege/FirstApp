@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import * as Font from 'expo-font';
 import Onboarding from './Onboarding';
+import { userLogin } from '../controllers/AuthenticationController';
 
 const LoginScreen = ({ 
      navigation
@@ -24,7 +25,7 @@ const LoginScreen = ({
   useEffect(() => {
     async function loadFont() {
       await Font.loadAsync({
-        'Noto-Sans': require('../../assets/Noto_Sans/NotoSans-Regular.ttf'),
+        'Noto-Sans': require('../../../assets/Noto_Sans/NotoSans-Regular.ttf'),
       });
       setFontLoaded(true);
     }
@@ -39,14 +40,17 @@ const LoginScreen = ({
 
   const handleLogin = () => {
 
-    const dummyEmail = 'test';
-    const dummyPassword = 'test';
-
-    if (email === dummyEmail && password === dummyPassword) {
-       navigation.navigate("Home")
-    } else {
-      alert('Invalid credentials. Please try again.');
-    }
+    userLogin(email, password).then(result=>{
+      if (result.result === true) {
+        navigation.navigate("Home");
+      } else {
+        const error = 'Invalid credentials. Please try again.';
+        alert(error);
+      }
+    }).catch(e=>{
+      console.error(e);
+      alert("Unexpected error");
+    });
   };
 
 
@@ -63,7 +67,7 @@ const LoginScreen = ({
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/login.png')} 
+        source={require('../../assets/images/login.png')} 
         style={styles.logo}
       />
       <View style={styles.inputContainer}>

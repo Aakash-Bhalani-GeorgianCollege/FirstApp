@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import SegmentedControl from '../components/SegmentedControl';
-import { DARK_COLORS } from '../styles/Colors';
+import SegmentedControl from '../../components/SegmentedControl';
+import { DARK_COLORS } from '../../styles/Colors';
 
 interface SettingsScreenProps {}
 
@@ -19,7 +19,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = () => {
       <Text style={styles.heading}>Settings</Text>
       <View style={styles.themeContainer}>
       <Image
-          source={require('../../assets/manage-theme.png')}
+          source={require('../../../assets/manage-theme.png')}
           style={styles.icon}
           resizeMode="contain"
         />
