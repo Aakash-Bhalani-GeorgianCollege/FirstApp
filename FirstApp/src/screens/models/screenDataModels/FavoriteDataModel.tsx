@@ -8,7 +8,7 @@ const testData: Array<WeatherCardData> = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: "../../../assets/images/grey-cloud.png",
+        imgPath: require("../../../assets/images/grey-cloud.png"),
         containerStyle: "warning"
     },
     {
@@ -19,7 +19,7 @@ const testData: Array<WeatherCardData> = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: "../../../assets/images/grey-cloud.png",
+        imgPath: require("../../../assets/images/grey-cloud.png"),
         containerStyle: "warning"
     },
     {
@@ -30,7 +30,7 @@ const testData: Array<WeatherCardData> = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: "../../../assets/images/black-cloud.png",
+        imgPath: require("../../../assets/images/black-cloud.png"),
         containerStyle: "danger"
     }
 ];

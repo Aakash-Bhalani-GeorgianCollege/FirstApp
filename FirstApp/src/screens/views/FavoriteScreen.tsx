@@ -6,9 +6,9 @@ import { getFavoriteDataFromModel } from "../controllers/screenDataControllers/F
 
 
 
-const testData = getFavoriteDataFromModel();
 
 const FavoriteScreen = () => {
+    const testData = getFavoriteDataFromModel();
     return (
         <>
         <Text style={favoritePageStyles.heading}>Weather</Text>
