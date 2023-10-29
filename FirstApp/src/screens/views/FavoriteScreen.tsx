@@ -1,7 +1,7 @@
 import { ScrollView, Text } from "react-native"
-import { favoritePageStyles } from "../styles/styles"
-import WeatherCard from "../components/WeatherCard/WeatherCard"
-import { WeatherRecord } from "../components/WeatherCard/WeatherRecord"
+import { favoritePageStyles } from "../../styles/styles"
+import WeatherCard from "../../components/WeatherCard/WeatherCard"
+import { WeatherRecord } from "../../components/WeatherCard/WeatherRecord"
 
 
 

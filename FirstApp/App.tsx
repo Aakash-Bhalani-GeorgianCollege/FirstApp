@@ -1,10 +1,10 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import TabNavigator from './TabNavigator';
 import { LIGHT_COLORS } from './src/styles/Colors';
-import LoginScreen from './src/screens/LoginScreen';
+import LoginScreen from './src/screens/views/LoginScreen';
 import ContactUs from './src/components/Contact';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignUpScreen from './src/screens/SignUpScreen';
+import SignUpScreen from './src/screens/views/SignUpScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
 const Stack = createStackNavigator();

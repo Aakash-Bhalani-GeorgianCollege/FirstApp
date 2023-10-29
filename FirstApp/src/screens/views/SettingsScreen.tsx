@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import SegmentedControl from '../components/SegmentedControl';
-import { DARK_COLORS } from '../styles/Colors';
+import SegmentedControl from '../../components/SegmentedControl';
+import { DARK_COLORS } from '../../styles/Colors';
 
 interface SettingsScreenProps {}
 

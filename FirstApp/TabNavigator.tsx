@@ -3,13 +3,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { Image } from 'react-native';
 import * as Font from 'expo-font';
-import SettingsScreen from './src/screens/SettingsScreen';
+import SettingsScreen from './src/screens/views/SettingsScreen';
 import HomePage from './src/components/HomePage/HomePage';
-import FavoriteScreen from './src/screens/FavoriteScreen';
+import FavoriteScreen from './src/screens/views/FavoriteScreen';
 import CityWeatherDetails from './src/components/CityWeatherDetails/CityWeatherDetails';
 import Contact from './src/components/Contact';
 import { DARK_COLORS, LIGHT_COLORS } from './src/styles/Colors';
-import Onboarding from './src/screens/Onboarding';
+import Onboarding from './src/screens/views/Onboarding';
 import SearchWeather from './src/components/Searchweather';
 
 

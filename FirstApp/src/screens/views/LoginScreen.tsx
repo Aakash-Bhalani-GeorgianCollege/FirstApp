@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import * as Font from 'expo-font';
 import Onboarding from './Onboarding';
+import { userLogin } from '../controllers/AuthenticationController';
 
 const LoginScreen = ({ 
      navigation
@@ -39,14 +40,17 @@ const LoginScreen = ({
 
   const handleLogin = () => {
 
-    const dummyEmail = 'test';
-    const dummyPassword = 'test';
-
-    if (email === dummyEmail && password === dummyPassword) {
-       navigation.navigate("Home")
-    } else {
-      alert('Invalid credentials. Please try again.');
-    }
+    userLogin(email, password).then(result=>{
+      if (result.result === true) {
+        navigation.navigate("Home");
+      } else {
+        const error = 'Invalid credentials. Please try again.';
+        alert(error);
+      }
+    }).catch(e=>{
+      console.error(e);
+      alert("Unexpected error");
+    });
   };
 
 
