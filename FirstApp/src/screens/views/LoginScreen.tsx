@@ -25,7 +25,7 @@ const LoginScreen = ({
   useEffect(() => {
     async function loadFont() {
       await Font.loadAsync({
-        'Noto-Sans': require('../../assets/Noto_Sans/NotoSans-Regular.ttf'),
+        'Noto-Sans': require('../../../assets/Noto_Sans/NotoSans-Regular.ttf'),
       });
       setFontLoaded(true);
     }
@@ -67,7 +67,7 @@ const LoginScreen = ({
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/login.png')} 
+        source={require('../../assets/images/login.png')} 
         style={styles.logo}
       />
       <View style={styles.inputContainer}>

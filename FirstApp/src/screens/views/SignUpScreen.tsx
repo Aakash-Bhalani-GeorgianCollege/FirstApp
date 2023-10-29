@@ -41,7 +41,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
                     ]
                 );
             }else {
-                
+
             }
         }).catch(e=>{
             console.error(e);
@@ -56,7 +56,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
     return (
         <>
         <View style={signUpPageStyles.mainBody}>
-            <Image style={signUpPageStyles.headerImage} source={require("../assets/images/rainy-black-cloud.png")} resizeMode="contain"></Image>
+            <Image style={signUpPageStyles.headerImage} source={require("../../assets/images/rainy-black-cloud.png")} resizeMode="contain"></Image>
 
             <Text style={signUpPageStyles.header}>Create an Account</Text>
             <View style={signUpPageStyles.inputView}>

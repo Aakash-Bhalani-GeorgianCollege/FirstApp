@@ -7,7 +7,7 @@ const testData = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: require("../assets/images/grey-cloud.png"),
+        imgPath: require("../../../assets/images/grey-cloud.png"),
         containerStyle: "warning"
     },
     {
@@ -18,7 +18,7 @@ const testData = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: require("../assets/images/grey-cloud.png"),
+        imgPath: require("../../../assets/images/grey-cloud.png"),
         containerStyle: "warning"
     },
     {
@@ -29,7 +29,7 @@ const testData = [
             maxTemp: 10,
             minTemp: -10,
         },
-        imgPath: require("../assets/images/black-cloud.png"),
+        imgPath: require("../../../assets/images/black-cloud.png"),
         containerStyle: "danger"
     }
 ]
