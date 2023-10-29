@@ -57,14 +57,7 @@ const firebaseUserRegister = async ({firstName, lastName, email, password}: User
     try {
         //Add firebase library functions here & replace dummyAsync later
         const dummyAsync = async (email: string, password: string) : Promise<boolean> => {
-            const dummyEmail = 'test';
-            const dummyPassword = 'test';
-        
-            if (email === dummyEmail && password === dummyPassword) {
-                return true;
-            } else {
-                return false;
-            }
+            return true;
         }
         const result = await dummyAsync(email, password);
         const response: OperationResult<UserData> = {result: result};
